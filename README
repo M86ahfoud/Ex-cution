@@ -4,12 +4,12 @@
 The project was made to practice API testing skills in Postman. Automated tests were written for the test scenarios shown below. The tests were run directly in the Postman app and via the command-line Collection Runner (Newman), which allows you to run and test a Postman Collection directly from the command-line.
 
 ## :one: Postman:
-![Rapport_Postman](./assets/Rapport_test_Postman.jpg)
+![Rapport_Postman](https://github.com/M86ahfoud/Ex-cution/blob/master/assets/Rapport_test_Postman.jpg)
 ## :two: Newman:
-![Rapport_Newman1](./assets/Rapport_Newman1.jpg)
-![Rapport_Newman1](./assets/Rapport_Newman2.jpg)
-![Rapport_Newman1](./assets/Rapport_Newman3.jpg)
-![Rapport_Newman1](./assets/Rapport_Newman4.jpg)
+![Rapport_Newman1](https://github.com/M86ahfoud/Ex-cution/blob/master/assets/Rapport_Newman1.jpg)
+![Rapport_Newman1](https://github.com/M86ahfoud/Ex-cution/blob/master/assets/Rapport_Newman2.jpg)
+![Rapport_Newman1](https://github.com/M86ahfoud/Ex-cution/blob/master/assets/Rapport_Newman3.jpg)
+![Rapport_Newman1](https://github.com/M86ahfoud/Ex-cution/blob/master/assets/Rapport_Newman4.jpg)
 ` newman run AutomationExercise.postman_collection.json --iteration-data .\test_data.json `
 
 ## :white_check_mark: API 1: Get All Products List
