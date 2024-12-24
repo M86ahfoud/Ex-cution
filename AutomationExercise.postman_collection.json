@@ -1,0 +1,984 @@
+{
+	"info": {
+		"_postman_id": "45c55a07-2d5b-40a9-9864-9b171e539938",
+		"name": "AutomationExercise",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40628700"
+	},
+	"item": [
+		{
+			"name": "Get All Products List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Check query method\r",
+							"pm.test(\"The correct méthode of request\", function() {\r",
+							"    pm.expect(pm.request.method).to.eql(\"GET\")\r",
+							"});\r",
+							"\r",
+							"//Check response code \r",
+							"pm.test(\" the reponse code is 200\", function() {\r",
+							"    pm.response.to.have.status(200)\r",
+							"});\r",
+							"//Check response message \r",
+							"pm.test(\"the reponse message is OK\", function() {\r",
+							"    pm.expect(pm.response.status).to.eql(\"OK\");\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/productsList",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"productsList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST To All Products List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Check query method\r",
+							"pm.test(\"The correct méthode of request\", function() {\r",
+							"    pm.expect(pm.request.method).to.eql(\"POST\")\r",
+							"});\r",
+							"\r",
+							"//Check response code \r",
+							"let response = pm.response.json()\r",
+							"pm.test(\" the reponse code is 405\", function() {\r",
+							"\r",
+							"    pm.expect(response.responseCode).to.eql(405)\r",
+							"});\r",
+							"//Check response message \r",
+							"pm.test(\"the reponse message is OK\", function() {\r",
+							"\r",
+							"    pm.expect(response.message).to.eql(\"This request method is not supported.\");\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"packages": {},
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "https://automationexercise.com/api/productsList",
+					"protocol": "https",
+					"host": [
+						"automationexercise",
+						"com"
+					],
+					"path": [
+						"api",
+						"productsList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Brands List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Check query method\r",
+							"pm.test(\"The correct méthode of request\", function() {\r",
+							"    pm.expect(pm.request.method).to.eql(\"GET\")\r",
+							"});\r",
+							"\r",
+							"//Check response code \r",
+							"pm.test(\" the reponse code is 200\", function() {\r",
+							"    pm.response.to.have.status(200)\r",
+							"});\r",
+							"//Check response message \r",
+							"pm.test(\"the reponse message is OK\", function() {\r",
+							"    pm.expect(pm.response.status).to.eql(\"OK\");\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"packages": {},
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "https://automationexercise.com/api/brandsList",
+					"protocol": "https",
+					"host": [
+						"automationexercise",
+						"com"
+					],
+					"path": [
+						"api",
+						"brandsList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT To All Brands List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Check query method\r",
+							"pm.test(\"The correct méthode of request\", function() {\r",
+							"    pm.expect(pm.request.method).to.eql(\"PUT\")\r",
+							"});\r",
+							"\r",
+							"//Check response code \r",
+							"let response = pm.response.json()\r",
+							"pm.test(\" the reponse code is 405\", function() {\r",
+							"\r",
+							"    pm.expect(response.responseCode).to.eql(405)\r",
+							"});\r",
+							"//Check response message \r",
+							"pm.test(\"the reponse message is OK\", function() {\r",
+							"\r",
+							"    pm.expect(response.message).to.eql(\"This request method is not supported.\");\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"packages": {},
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/brandsList",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"brandsList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST To Search Product",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Check quesry method\r",
+							"pm.test(\"The correct méthode of request\", function() {\r",
+							"    pm.expect(pm.request.method).to.eql(\"POST\")\r",
+							"})\r",
+							"// Check the code reponse \r",
+							"pm.test(\"The code response is 200\", function() {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Check Json response content \r",
+							"pm.test(\"The response contains the list of products searched\", function() {\r",
+							"    let jesonData = pm.response.json();\r",
+							"    pm.expect(jesonData).to.be.an(\"object\");\r",
+							"    pm.expect(jesonData).to.have.property(\"products\");\r",
+							"    pm.expect(jesonData.products).to.be.an(\"array\");\r",
+							"})\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "search_product",
+							"value": "{{search_product}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL}}/api/searchProduct",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"searchProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST To Search Product without search_product parameter",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let response = pm.response.json();\r",
+							"pm.test(\"The response code\", function () {\r",
+							"    pm.expect(response.responseCode).to.eql(400);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"The correct méthode of request\", function() {\r",
+							"    pm.expect(pm.request.method).to.eql(\"POST\")\r",
+							"});\r",
+							"pm.test(\"The reponse message\", function() {\r",
+							"    pm.expect(response).to.have.property(\"message\")\r",
+							"    pm.expect(response.message).to.eql(\"Bad request, search_product parameter is missing in POST request.\")\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/searchProduct",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"searchProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "To Verify Login with valid details",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Check quesry method\r",
+							"pm.test(\"The correct méthode of request\", function() {\r",
+							"    pm.expect(pm.request.method).to.eql(\"POST\")\r",
+							"})\r",
+							"\r",
+							"// Check the code reponse \r",
+							"pm.test(\"The code response is 200\", function() {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"    let response = pm.response.json()\r",
+							"// Check response message  \r",
+							"pm.test(\"The response message is OK\", function () {\r",
+							"    pm.expect(response.message).to.eql(\"User exists!\")\r",
+							"})\r",
+							"// Check Json content \r",
+							"pm.test (\"The response contains the list of property\", function() {\r",
+							"    pm.expect(response).to.be.an(\"object\");\r",
+							"    pm.expect(response).to.have.property(\"message\")\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "{{email}}",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL}}/api/verifyLogin",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"verifyLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST To Verify Login without email parameter",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Check quesry method\r",
+							"pm.test(\"The correct méthode of request\", function() {\r",
+							"    pm.expect(pm.request.method).to.eql(\"POST\")\r",
+							"})\r",
+							"\r",
+							"//Check response code \r",
+							"let response = pm.response.json()\r",
+							"pm.test(\" the reponse code is 405\", function() {\r",
+							"\r",
+							"    pm.expect(response.responseCode).to.eql(400)\r",
+							"});\r",
+							"\r",
+							"// Check response message  \r",
+							"pm.test(\"The response message is OK\", function () {\r",
+							"    pm.expect(response.message).to.eql(\"Bad request, email or password parameter is missing in POST request.\")\r",
+							"})\r",
+							"\r",
+							"// Check json content\r",
+							"pm.test (\"The response contains the list of property\", function() {\r",
+							"    pm.expect(response).to.be.an(\"object\");\r",
+							"    pm.expect(response).to.have.property(\"message\")\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL}}/api/verifyLogin",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"verifyLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE To Verify Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Check quesry method\r",
+							"pm.test(\"The correct méthode of request\", function() {\r",
+							"    pm.expect(pm.request.method).to.eql(\"DELETE\")\r",
+							"})\r",
+							"\r",
+							"//Check response code \r",
+							"\r",
+							"let response = pm.response.json();\r",
+							"\r",
+							"pm.test(\"The response code is 405\", function() {\r",
+							"    pm.expect(response.responseCode).to.eql(405);\r",
+							"})\r",
+							"\r",
+							"// Check response message \r",
+							"\r",
+							"pm.test(\"The message response \", function() {\r",
+							"    pm.expect(response.message).to.eql(\"This request method is not supported.\")\r",
+							"})\r",
+							"\r",
+							"// Check json content\r",
+							"pm.test (\"The response contains the list of property\", function() {\r",
+							"    pm.expect(response).to.be.an(\"object\");\r",
+							"    pm.expect(response).to.have.property(\"message\")\r",
+							"})\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/verifyLogin",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"verifyLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST To Verify Login with invalid details",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// // Check quesry method\r",
+							"pm.test(\"The correct méthode of request\", function() {\r",
+							"    pm.expect(pm.request.method).to.eql(\"POST\")\r",
+							"})\r",
+							"\r",
+							"// Check response code\r",
+							"let response = pm.response.json();\r",
+							"\r",
+							"pm.test(\"The response code \", function() {\r",
+							"    pm.expect(response.responseCode).to.eql(404);\r",
+							"})\r",
+							"\r",
+							"//Check reponse message\r",
+							"\r",
+							"pm.test(\"The reponse message\", function() {\r",
+							"    pm.expect(response).to.have.property(\"message\")\r",
+							"    pm.expect(response.message).to.eql(\"User not found!\")\r",
+							"})\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "{{email_invalid}}",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "{{password_invalid}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL}}/api/verifyLogin",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"verifyLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST To Create/Register User Account",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// Récupérer l'email depuis le fichier de données\r",
+							"let emailBase = pm.iterationData.get(\"email\");\r",
+							"\r",
+							"// Randomiser l'email avec un identifiant unique\r",
+							"let uniqueIdentifier = Math.floor(Math.random() * 1000000); // Génère un nombre aléatoire\r",
+							"let randomizedEmail = emailBase.replace(\"@\", `_${uniqueIdentifier}@`);\r",
+							"\r",
+							"// Assigner l'email randomisé à une variable globale ou d'environnement\r",
+							"pm.environment.set(\"randomEmail\", randomizedEmail);\r",
+							"\r",
+							"// Log pour vérifier\r",
+							"console.log(\"Randomized Email:\", randomizedEmail);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"The correct méthode of request\", function() {\r",
+							"    pm.expect(pm.request.method).to.eql(\"POST\")\r",
+							"})\r",
+							"\r",
+							"// Check response code\r",
+							"let response = pm.response.json();\r",
+							"\r",
+							"pm.test(\"The response code \", function() {\r",
+							"    pm.expect(response.responseCode).to.eql(201);\r",
+							"})\r",
+							"\r",
+							"//Check reponse message\r",
+							"\r",
+							"pm.test(\"The reponse message\", function() {\r",
+							"    pm.expect(response).to.have.property(\"message\")\r",
+							"    pm.expect(response.message).to.eql(\"User created!\")\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "{{name}}",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "{{randomEmail}}",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "{{title}}",
+							"type": "text"
+						},
+						{
+							"key": "birth_date",
+							"value": "{{birth_date}}",
+							"type": "text"
+						},
+						{
+							"key": "birth_month",
+							"value": "{{birth_month}}",
+							"type": "text"
+						},
+						{
+							"key": "birth_year",
+							"value": "{{birth_year}}",
+							"type": "text"
+						},
+						{
+							"key": "firstname",
+							"value": "{{firstname}}",
+							"type": "text"
+						},
+						{
+							"key": "lastname",
+							"value": "{{lastname}}",
+							"type": "text"
+						},
+						{
+							"key": "company",
+							"value": "{{company}}",
+							"type": "text"
+						},
+						{
+							"key": "address1",
+							"value": "{{address1}}",
+							"type": "text"
+						},
+						{
+							"key": "address2",
+							"value": "{{address2}}",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "{{country}}",
+							"type": "text"
+						},
+						{
+							"key": "zipcode",
+							"value": "{{zipcode}}",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "{{state}}",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "{{city}}",
+							"type": "text"
+						},
+						{
+							"key": "mobile_number",
+							"value": "{{mobile_number}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://automationexercise.com/api/createAccount",
+					"protocol": "https",
+					"host": [
+						"automationexercise",
+						"com"
+					],
+					"path": [
+						"api",
+						"createAccount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET user account detail by email",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							" // Check quesry method\r",
+							"pm.test(\"The correct méthode of request\", function() {\r",
+							"    pm.expect(pm.request.method).to.eql(\"GET\")\r",
+							"})\r",
+							"\r",
+							"// Check response code\r",
+							"\r",
+							"pm.test(\"The response code \", function() {\r",
+							"    pm.response.to.have.status(200);\r",
+							"})\r",
+							"\r",
+							"//Check reponse message\r",
+							"let response = pm.response.json();\r",
+							"\r",
+							"pm.test(\"The reponse JSON\", function() {\r",
+							"    pm.expect(response).to.be.an(\"object\");\r",
+							"    pm.expect(response).to.have.property(\"user\");\r",
+							"    pm.expect(response.user).to.be.an(\"object\")\r",
+							"   \r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL}}/api/getUserDetailByEmail?email={{randomEmail}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"getUserDetailByEmail"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "{{randomEmail}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT METHOD To Update User Account",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							" // Check quesry method\r",
+							"pm.test(\"The correct méthode of request\", function() {\r",
+							"    pm.expect(pm.request.method).to.eql(\"PUT\")\r",
+							"})\r",
+							"\r",
+							"// Check response code\r",
+							"let response = pm.response.json();\r",
+							"\r",
+							"pm.test(\"The response code \", function() {\r",
+							"    pm.response.to.have.status(200);\r",
+							"})\r",
+							"\r",
+							"//Check reponse message\r",
+							"\r",
+							"pm.test(\"The reponse message\", function() {\r",
+							"    pm.expect(response).to.have.property(\"message\")\r",
+							"    pm.expect(response.message).to.eql(\"User updated!\")\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "{{randomEmail}}",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "{{title_Put}}",
+							"type": "text"
+						},
+						{
+							"key": "birth_date",
+							"value": "{{birth_date_Put}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://automationexercise.com/api/updateAccount",
+					"protocol": "https",
+					"host": [
+						"automationexercise",
+						"com"
+					],
+					"path": [
+						"api",
+						"updateAccount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE METHOD To Delete User Account",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Check quesry method\r",
+							"pm.test(\"The correct méthode of request\", function() {\r",
+							"    pm.expect(pm.request.method).to.eql(\"DELETE\")\r",
+							"})\r",
+							"\r",
+							"//Check response code \r",
+							"\r",
+							"let response = pm.response.json();\r",
+							"\r",
+							"pm.test(\"The response code is 200\", function() {\r",
+							"    pm.response.to.have.status(200);\r",
+							"})\r",
+							"\r",
+							"// Check response message \r",
+							"\r",
+							"pm.test(\"The message response \", function() {\r",
+							"    pm.expect(response.message).to.eql(\"Account deleted!\")\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "{{randomEmail}}",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL}}/api/deleteAccount",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"deleteAccount"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "randomEmail",
+			"value": "xxxx@gmail.com",
+			"type": "string"
+		}
+	]
+}

@@ -1,0 +1,29 @@
+[
+    {
+    "URL":"https://automationexercise.com",
+    "search_product": "top",
+    "email": "testLogiciel6@yahoo.com",
+    "password": "test12001", 
+    "email_invalid":"iammmalho@gmail.com",
+    "password_invalid":"@wamolst",
+    "name":"Alpha",
+    "title": "Mr",
+    "birth_date": "21",
+    "birth_month": "06",
+    "birth_year": "1991",
+    "firstname": "kalifa",
+    "lastname":"Kaal",
+    "company": "AirFrance",
+    "address1": "45 rue de paris",
+    "address2": "appt 2 premier étage",
+    "country": "France",
+    "zipcode": "45000",
+    "state": "Val de Marne",
+    "city":"Orléan",
+    "mobile_number": "0058963451274",
+    "email_Put": "alphabeta1@hotmail.com",
+    "password_Put": "test02024",
+    "title_Put": "Mrs",
+    "birth_date_Put": "10"
+}
+]
