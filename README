@@ -1,17 +1,16 @@
 # :gem: Automation Exercise - REST API Testing
 ## :diamond_shape_with_a_dot_inside: Automated API tests created in Postman
-## :earth_africa: Website home page
-
-
 ## :information_source: About this project
 The project was made to practice API testing skills in Postman. Automated tests were written for the test scenarios shown below. The tests were run directly in the Postman app and via the command-line Collection Runner (Newman), which allows you to run and test a Postman Collection directly from the command-line.
 
 ## :one: Postman:
-
+![Rapport_Postman](./assets/Rapport_test_Postman.jpg)
 ## :two: Newman:
+![Rapport_Newman1](./assets/Rapport_Newman1.jpg)
+![Rapport_Newman1](./assets/Rapport_Newman2.jpg)
+![Rapport_Newman1](./assets/Rapport_Newman3.jpg)
+![Rapport_Newman1](./assets/Rapport_Newman4.jpg)
 ` newman run AutomationExercise.postman_collection.json --iteration-data .\test_data.json `
-
-
 
 ## :white_check_mark: API 1: Get All Products List
 * API URL: https://automationexercise.com/api/productsList
